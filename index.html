@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+          }
+        </script>
+          
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="https://github.com/aksh0506/akshay-portfolio/blob/main/Logo.jpeg" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#about">ABOUT ME</a></li>
+                        <li><a href="#projects">PERSONAL PROJECTS</a></li>
+                        <li><a href="#technical skills">SKILLS</a></li>
+                       <!--<li><a href="#contact">CONTACT</a></li>-->
+                        <i class="fa fa-close" style="font-size:24px" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa fa-bars" style="font-size:24px" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <h1>Hi, my name is</h1>
+                    <h1>AKSHAY</h1>
+                    <!--<h1 aria-label="I'm a manual tester">-->
+                       <!--I'm a&nbsp;<span class="typewriter"></span></h1>--> 
+                </div>
+                <button class="btn12" style="vertical-align:middle"><a href="#contact"><span>CONTACT ME</span></a></button>
+           </div>
+        </div>
+        <!-----------------------About------------------------>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="https://github.com/aksh0506/akshay-portfolio/blob/main/profile-pic.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">ABOUT ME</h1>
+                        <br>
+                        <p class="sub-title-text">My name is Akshay Gawas</p></br>
+                        <p class="sub-title-text-p" >👋 Hello! I'm a Mechanical Engineer with a passion for ensuring the quality and reliability of software. I recently completed a comprehensive Software Testing course, where I gained hands-on experience with various testing tools and methodologies.</p><br></br>
+                        
+                        <p class="sub-title-text-p">🔧 As a Mechanical Engineer, I've developed a keen eye for detail and a systematic approach to problem-solving, skills that I've found to be incredibly valuable in the realm of software testing.</p><br></br>
+                            
+                        <p class="sub-title-text-p">💻 In the Software Testing course, I learned how to write effective test cases, manage test data, and report results professionally. I also gained experience with both manual testing and automated testing tools.</p><br></br>
+                            
+                        <p class="sub-title-text-p">🎯 I'm now looking for a role where I can apply my engineering background and my software testing skills to help build high-quality software products. I'm particularly interested in roles that will allow me to be part of the entire software development lifecycle.</p><br></br>
+                            
+                        <p class="sub-title-text-p">🌱 I'm a quick learner, eager to keep up with the latest trends in software testing and quality assurance. I'm also a team player who values collaboration and clear communication.</p><br></br>
+                            
+                        <p class="sub-title-text-p">👜 If you know of any opportunities or if you want to connect and chat, please feel free to reach out!
+                            
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
+                            <p class="tab-links"  onclick="opentab('education')">EDUCATION</p>
+                            <!--<p class="tab-links"  onclick="opentab('experience')">EXPERIENCE</p>-->
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                                <button class="collapsible">Manual Testing</button>
+                                <div class="content">
+                                <p>Software Development Life Cycle (SDLC) and Software Test Life Cycle (STLC), 
+                                   generate Test Scenarios, Write Test Cases and Collect Test Data, 
+                                   defect Reporting, defect Tracking using JIRA and complete Defect Life cycle,Conduct comprehensive bug identification, 
+                                   documentation, regression testing after bug resolution,
+                                   knowledge of Agile and Scrum development processes. </p>
+                                </div>
+                                <button class="collapsible">Automation Testing</button>
+                                <div class="content">
+                                <p>Design, develop and execute automation scripts, 
+                                    writing Automation Test Scripts and object identification using xpaths, id, name, etc.,
+                                    Defect Reporting, Defect Tracking using JIRA and complete Defect Life cycle,
+                                    automating Web Applications using Web Driver in Eclipse,
+                                    knowledge of Page Object Model (POM), TestNG and Cucumber framework,
+                                    exposure to Maven and Apache JMeter.
+                                </p>
+                                </div>
+                                <script>
+                                    var coll = document.getElementsByClassName("collapsible");
+                                    var i;
+                                    
+                                    for (i = 0; i < coll.length; i++) {
+                                      coll[i].addEventListener("click", function() {
+                                        this.classList.toggle("active");
+                                        var content = this.nextElementSibling;
+                                        if (content.style.maxHeight){
+                                          content.style.maxHeight = null;
+                                        } else {
+                                          content.style.maxHeight = content.scrollHeight + "px";
+                                        } 
+                                      });
+                                    }
+                                    </script>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023-2024</span><br>Software Testing Course from Analytiq Learning</li>
+                                <li><span>2019</span><br>B.E.(Mechanical)</li>
+                            </ul>
+                        </div>
+                        <!---<div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021-2023</span><br>Quality Engineer at PVG Technology</li>
+                                <li><span>2018-2021</span><br>Research and Development Engineer at Ducati Energia (I) Pvt. Ltd.</li>
+                            </ul>
+                        </div>--->
+                    </div>
+                </div>
+            </div>
+        </div>
+<!---------------SERVICES---------->
+<!----<div id="services">
+    <div class="container"></div>
+    <h1 class="sub-title">TECHNICAL SKILLS</h1>
+    <div class="services-list">
+        <div>
+            <h2>Manual Testing</h2>
+            <p>SDLC, STLC</p>
+        </div>
+        <div>
+        <h2>Automation Testing</h2>
+            <p>SDLC, STLC</p>
+        </div>
+    </div>
+</div>---->
+
+       
+        <!-------PERSONAL PROJECTS-------->
+        <div id="projects">
+            <div class="container">
+                <h1 class="sub-title">PERSONAL PROJECTS</h1>
+                <div class="project-list">
+                    <div>
+                        <h2>Manual Testing</h2>
+                        <p>OrangeHRM</p> 
+                        <p>(Human Resource Management System)</p>
+                    </div>
+                    <div>
+                        <h2>Automation Testing</h2>
+                        <p>JPetstore</p> 
+                        <p>(Pet Store application)</p>
+                    </div>
+            </div>
+            <br></br><br></br><br></br><br></br>
+        </div>
+        <!------------PORTFOLIO----------->
+        <div id="technical skills">
+            <div class="container">
+                <h1 class="sub-title">SKILLS</h1>
+                <div class="skill-list">
+                    <div class="skill">
+                        <img src="https://github.com/aksh0506/akshay-portfolio/blob/main/java1.jpg">
+                        <div class="layer">
+                            <h3 class="hovertext">Java</h3>
+                            <p>Programming Language</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="https://github.com/aksh0506/akshay-portfolio/blob/main/Selenium1.jpg">
+                        <div class="layer">
+                            <h3 class="hovertext">Selenium with Java</h3>
+                            <p>Software Testing Tool</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="https://github.com/aksh0506/akshay-portfolio/blob/main/TestNG1.jpg">
+                        <div class="layer">
+                            <h3 class="hovertext">TestNG</h3>
+                            <p>Automation Testing Framework</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="https://github.com/aksh0506/akshay-portfolio/blob/main/cucumber1.jpg">
+                        <div class="layer">
+                            <h3 class="hovertext">Cucumber</h3>
+                            <p>Automation Testing Framework</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="https://github.com/aksh0506/akshay-portfolio/blob/main/jmeter1.jpg">
+                        <div class="layer">
+                            <h3 class="hovertext">JMeter</h3>
+                            <p>Performance Testing</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="https://github.com/aksh0506/akshay-portfolio/blob/main/mysql1.jpg">
+                        <div class="layer">
+                            <h3 class="hovertext">MySQL</h3>
+                            <p>Database Administration</p>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <img src="https://github.com/aksh0506/akshay-portfolio/blob/main/jira1.jpg">
+                        <div class="layer">
+                            <h3 class="hovertext">Jira</h3>
+                            <p>Bug Tracking Tool</p>
+                        </div>
+                    </div>
+               <!--</div>
+                <a class="btn">See more</a>
+            </div>--> 
+            </div><br></br><br></br><br></br>
+        </div>
+<!-------------CONTACT--------------->
+<div id="contact"></div>
+        <div class="container">
+            <h1 class="sub-title">CONTACT ME</h1>
+            <div class="row">
+                <!-- Top Side -->
+                <div class="contact-top">
+                    <div>
+                        <a href="mailto:akshaygawas1443@gmail.com" mail class="btn btn2">Email  <i class="fa fa-paper-plane"></i></a>
+                        <a href="Akshay_Gawas_CV.pdf" download class="btn btn2">Resume  <i class="fa fa-download" style="font-size:24px"></i></a>
+                    </div>
+                </div>
+            
+                <!-- Bottom Side -->
+                <div class="contact-bottom">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn21">Submit</button>
+                    </form>
+                </div>
+            </div>
+            
+            
+                <div class="copyright">
+                    <p>Copyright <i class="fa fa-copyright" style="font-size:14px"></i> Akshay Gawas made with <i class="fa fa-heart" style="font-size:14px"></i></p>
+                </div>
+        </div>
+
+        <script>
+          
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+<script>
+    var sidemenu = document.getElementById('sidemenu');
+    var menuButton = document.querySelector('.fa-bars'); // Get the menu button
+
+    function openmenu() {
+        sidemenu.style.right = '0';
+        menuButton.style.display = 'none'; // Hide the menu button
+    }
+
+    function closemenu() {
+        sidemenu.style.right = '-200px';
+        menuButton.style.display = 'block'; // Show the menu button
+    }
+
+    // Close the sidemenu when clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!sidemenu.contains(event.target) && event.target !== menuButton) {
+            closemenu();
+        }
+    });
+
+    // Close the sidemenu when clicking on a link within it
+    var links = sidemenu.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', closemenu);
+    }
+</script>
+
+<!----------Scroll up----------->
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" style="font-size:48px;color:#ff004f"></i></button>
+<script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+    </body>
+</html>
+        
